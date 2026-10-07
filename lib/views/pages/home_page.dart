@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-          HeroWidget(),
+          HeroWidget(title: "Flutter "),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 10.0),

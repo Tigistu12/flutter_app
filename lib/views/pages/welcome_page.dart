@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/views/widget_tree.dart';
+import 'package:flutter_app/views/pages/login_page.dart';
 import 'package:flutter_app/views/widgets/hero_widget.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -13,14 +13,24 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          HeroWidget(),
+          HeroWidget(title: "Welcome"),
+          SizedBox(height: 20.0),
+                    FilledButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return LoginPage();
+            })); 
+          },
+      child: Text('Get Started'),
+          ),
+           SizedBox(height: 20.0),
+
           FilledButton(onPressed: () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-              return WidgetTree();
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return LoginPage();
             })); 
           },
       child: Text('Login'),
-          )
+          ),
         ],
         ),
       ),
