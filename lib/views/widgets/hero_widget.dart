@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HeroWidget extends StatelessWidget {
-  const HeroWidget({super.key, required this.title});
+  const HeroWidget({super.key});
 
-  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class HeroWidget extends StatelessWidget {
                   ),
         ),
         FittedBox(
-          child: Text(title,
+          child: Text("Flutter",
            style: TextStyle(
             fontWeight: FontWeight.bold, 
             fontSize: 50.0,

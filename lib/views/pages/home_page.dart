@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/constants.dart';
+import 'package:flutter_app/views/widgets/container_widget.dart';
 import 'package:flutter_app/views/widgets/hero_widget.dart';
 
 
@@ -10,30 +10,30 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-          HeroWidget(title: "Flutter "),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Basic layout", 
-                    style: KTextStyle.titleTealText,
-                    ),
-                    Text("The description of this",
-                     style: KTextStyle.descriptionText,
-                     ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+          HeroWidget(),
+         ContainerWidget(
+          title: 'Basic Layout',
+           description: 'This is a description text'
+           ),
+           ContainerWidget(
+          title: 'Basic Layout',
+           description: 'This is a description text'
+           ),
+           ContainerWidget(
+          title: 'Basic Layout',
+           description: 'This is a description text'
+           ),
+           ContainerWidget(
+          title: 'Basic Layout',
+           description: 'This is a description text'
+           ),
+           ContainerWidget(
+          title: 'Basic Layout',
+           description: 'This is a description text'
+           ),
         ],
         ),
       
