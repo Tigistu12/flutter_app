@@ -14,29 +14,24 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
           HeroWidget(),
-         ContainerWidget(
-          title: 'Basic Layout',
+          Column(children: List.generate(5, (index) {
+            return  ContainerWidget(
+            title: 'Basic Layout',
            description: 'This is a description text'
-           ),
-           ContainerWidget(
-          title: 'Basic Layout',
-           description: 'This is a description text'
-           ),
-           ContainerWidget(
-          title: 'Basic Layout',
-           description: 'This is a description text'
-           ),
-           ContainerWidget(
-          title: 'Basic Layout',
-           description: 'This is a description text'
-           ),
-           ContainerWidget(
-          title: 'Basic Layout',
-           description: 'This is a description text'
-           ),
-        ],
+           );
+          }
+          ),
         ),
-      
+        // or  on the other hand we can do that 
+        // ...List.generate(5, (index) {
+        //   return  ContainerWidget(
+        //   title: 'Basic Layout',
+        //  description: 'This is a description text'
+        //  );
+        // }),
+
+          ],
+        ),
       ),
     );
   }
