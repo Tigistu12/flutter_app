@@ -21,9 +21,11 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            SizedBox(height: 10.0),
           HeroWidget(
            nextPage: CoursePage(),
           ),
+          SizedBox(height: 5.0),
           ...List.generate(
             list.length, (index) {
           return  ContainerWidget(
