@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
               ),
                SizedBox(height: 20.0),
           
-              FilledButton(onPressed: () {
+              TextButton(onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return LoginPage(title: "Login");
                 })); 
